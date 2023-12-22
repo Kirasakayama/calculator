@@ -4,27 +4,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>calculator</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    @font-face {
+      font-family: 'calculatorFont';
+      src: url(fonts/calculatorFont.ttf);
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="resultdiv" style="border:1px black solid; width:90%;height:10vmin;margin-bottom:4vmin;"><p class="result"></p></div>
-  
-   <button id="zero">0</button>
-   <button id="one">1</button>
-   <button id="two">2</button>
-   <button id="three" >3</button>
-   <button id="four">4</button>
-   <button id="five">5</button>
-   <button id="six">6</button>
-   <button id="seven">7</button>
-   <button id="eight">8</button>
-   <button id="nine">9</button>
-   <button id="plus">+</button>
-   <button id="minis">-</button>
-   <button id="times">*</button>
-   <button id="equal">=</button>
+
+    <div class="calculator">
+
+        <div class="result"><h1 class="resultNumber"></h1>
+        <h2 class="theresult"></h2>
+        </div>
+        <div class="numbers">
+
+        <div class="column">
+          <button class="percent">%</button>
+          <button class="leftbracket"> ( </button>
+          <button class="rightbracket"> ) </button>
+          <button class="delete">AC</button>
+        </div>
+
+        <div class="column">
+        <button class="seven">7</button>
+        <button class="eight">8</button>
+        <button class="nine">9</button>
+        <button class="plusButton">+</button>
+        </div>
+
+        <div class="column">
+          <button class="four">4</button>
+          <button class="five">5</button>
+          <button class="six">6</button>
+          <button class="multipButton">*</button>
+        </div>
+
+        <div class="column">
+          <button class="one">1</button>
+          <button class="two">2</button>
+          <button class="three">3</button>
+          <button class="subsButton">-</button>
+        </div>
+
+        <div class="column">
+          <button class="divideButton">/</button>
+          <button class="zero">0</button>
+          <button class="periodButton">.</button>
+          <button class="equalsignButton">=</button>
+        </div>
+
+        </div>
+
+    </div>
 
   <script src="script.js" ></script>
 </body>

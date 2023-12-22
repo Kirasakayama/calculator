@@ -1,4 +1,75 @@
-html {
-  height: 100%;
-  width: 100%;
+body{
+margin: 6vmin;background-color: #1a2032;
+}
+.calculator{
+height: 86vh;width:35%;border-radius: 2vmin ;
+background-color: #1a2032;margin: auto;box-shadow: 4px 4px 0px rgb(66, 83, 134),0px 0px 0px 1px rgb(66, 83, 134) inset;   
+}
+
+@keyframes displayresult {
+    0%{transform: translateY(480%); visibility: hidden;opacity: 0;}
+    100%{transform: translateY(380%); visibility: visible;opacity: 1;}
+}
+@keyframes undisplayresult {
+    100%{transform: translateY(480%); visibility: hidden;opacity: 0;}
+    50%{opacity: 0.5;}
+    0%{transform: translateY(380%); visibility: visible;opacity: 1;}
+}
+
+.result{
+height: 40%;margin-top: 2vmin;
+font-family: 'calculatorFont' !important;
+color: white;font-size: 20px;
+}
+.resultNumber{
+height: 10vmin;
+margin: 2vmin;text-align: center;
+transform: translateY(150%);word-wrap: break-word;
+z-index: 0;
+}
+.theresult{
+margin: 2vmin;text-align: center;visibility: hidden;
+transform: translateY(480%);word-wrap: break-word;
+z-index: 0;color:rgb(161, 185, 255);
+text-shadow: 0 0 10px royalblue ;
+z-index: 0;
+}
+.numbers{
+height: 56%;margin-top: 2vmin;
+display: flex;flex-direction: column;
+z-index: 1;
+}
+.column{
+/* border: 1px purple solid; */
+height: 25%;z-index: 1;
+display: flex;flex-direction: row;justify-content: space-between;
+}
+.column button{
+width: 25%;margin: 4px;z-index: 1;
+background-color:  #242c45;
+border: none;color: white;border-radius: 2vmin;
+font-size: 24px;cursor: pointer;
+box-shadow: 1px 1px 0px rgb(84, 95, 130);
+font-family: 'calculatorFont' !important;
+transition: margin 0.1s , background-color 0.1s , color 0.1s;
+}
+.column button:hover{
+margin: 6px;background-color: white;color:  #242c45;
+box-shadow: 0px 0px 0px rgb(84, 95, 130);
+}
+.equalsignButton{
+background-color: rgb(61, 96, 202) !important;
+transition: color 0.1s , background-color 0.1s;
+}
+.equalsignButton:hover{
+color: rgb(61, 96, 202) !important;
+background-color: white !important;
+}
+.percent , .rightbracket , .leftbracket , .plusButton , .multipicationButton , .substructionButton , .delete{
+    background-color: #323c5b !important;  
+    transition: color 0.1s , background-color 0.1s;
+}
+.percent:hover , .rightbracket:hover , .leftbracket:hover , .plusButton:hover , .multipicationButton:hover , .substructionButton:hover , .delete:hover{
+    color: #323c5b !important;  
+    background-color: white !important;
 }
